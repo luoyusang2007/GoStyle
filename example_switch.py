@@ -26,3 +26,5 @@ switch(a,{
         lambda : print("default")
     )
 })
+
+print(outer_var)

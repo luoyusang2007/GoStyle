@@ -33,7 +33,7 @@ def test_thread(title:str):
         print(title)
 # Start the thread 
 test_thread.start("Start")
-# Note that the expression "test_thread('Normal')" stll can run the original function in main thread.
+# Note that the expression "test_thread('Normal')" can still run the original function in main thread.
 ```
 
 Or, if the function is not a class/object method:
@@ -46,7 +46,7 @@ def test_thread(title:str):
         print(title)
 # Start the thread 
 gostyle.to.test_thread("Go To Destination")
-# Note that the expression "test_thread('Normal')" stll can run the original function in main thread.
+# Note that the expression "test_thread('Normal')" can still run the original function in main thread.
 ```
 
 Or:
@@ -60,7 +60,7 @@ def test_thread(title:str):
         print(title)
 # Start the thread 
     go.test_thread("Go")
-# Note that the expression "test_thread('Normal')" stll can run the original function in main thread.
+# Note that the expression "test_thread('Normal')" can still run the original function in main thread.
 ```
 
 If the function is not self-defined(you can not add decorator to the function), or the function is a method of a class/object(the function you defined is hard to attach to "go"(same as "to") object in this package), you can use syntax like following:
@@ -100,6 +100,8 @@ test_thread.start("Start Loop")
 
 # Todos
 ## Threading
+Manage Threads started by gostyle
+Collect return values
 Single Instance support
 Yield Support
 Multithreading Support 
