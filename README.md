@@ -25,6 +25,7 @@ t.start()
 ## How To Use in Python
 If the function is self-defined, you can use decorator `@gostyle.startable()` like following:
 ```python
+import time
 import gostyle
 @gostyle.startable()
 def test_thread(title:str):
@@ -38,6 +39,7 @@ test_thread.start("Start")
 
 Or, if the function is not a class/object method:
 ```python
+import time
 import gostyle
 @gostyle.destination()
 def test_thread(title:str):
@@ -52,6 +54,7 @@ gostyle.to.test_thread("Go To Destination")
 Or:
 
 ```python
+import time
 from gostyle import go
 @go.goable()
 def test_thread(title:str):
@@ -65,6 +68,7 @@ def test_thread(title:str):
 
 If the function is not self-defined(you can not add decorator to the function), or the function is a method of a class/object(the function you defined is hard to attach to "go"(same as "to") object in this package), you can use syntax like following:
 ```python
+import time
 from gostyle import go
 def test_thread(title:str):
     while True:
@@ -77,6 +81,7 @@ go(test_thread)("Call")
 ## Run-Forever and Daemonize
 The `daemon` parameter controls the deamon option in package `threading`. and the forever parameter lets you get rid of a `while True:` expression in the function you defined.
 ```python
+import time
 from gostyle import go
 def test_thread(title:str):
     # No Internal WHILE Here.
@@ -87,6 +92,7 @@ go(test_thread, forever=True)("Call Forever")
 ```
 
 ```python
+import time
 from gostyle import go
 @gostyle.startable(forever=True)
 def test_thread(title:str):
