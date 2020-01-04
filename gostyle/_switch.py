@@ -1,6 +1,6 @@
 from collections import OrderedDict
 import inspect
-def set_var(name,val, layer = 3):
+def sw_set_var(name,val, layer = 3):
     stack = inspect.stack()
     inspect.getargvalues(stack[layer].frame).locals[name]=val
 def _empty_func():

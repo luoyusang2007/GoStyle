@@ -22,7 +22,7 @@ t.start()
 #...
 ```
 
-## How To USE
+## How To Use in Python
 If the function is self-defined, you can use decorator `@gostyle.startable` like following:
 ```python
 import gostyle
@@ -97,6 +97,28 @@ def test_thread(title:str):
 test_thread.start("Start Loop")
 ```
 
+# Defer
+In Golang, defer is used to do things(usually cleaning-up) after a function returns.
+## How To Use in Python
+```python
+
+from gostyle import defer_inside, defer
+@defer_inside
+def great_func():
+    a = [1,2,3]
+    b = 8
+    defer(
+        lambda : a.append(7),
+        lambda : print(a),
+        lambda : print(b)
+    )
+    a[1] = 5 # Change content of a after claiming defer
+    return a,b
+    
+print(great_func())
+
+```
+
 
 # Todos
 ## Threading
@@ -107,7 +129,7 @@ Yield Support
 Multithreading Support 
 
 ## Defer
-Defer Support
+Multi-times Defer Support
 
 ## Queue
 Queue Wrapper

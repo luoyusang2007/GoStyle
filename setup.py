@@ -1,20 +1,21 @@
 from setuptools import setup, find_packages
 
-#with open('README.md') as fp:
-#    readme = fp.read()
+with open('README.md') as fp:
+    readme = fp.read()
 
 setup(
     # 以下为必需参数
     name='gostyle',  # 模块名
-    version='0.1.1',  # 当前版本
+    version='0.1.4',  # 当前版本
     description='Golang Syntax For Python',  # 简短描述
     # py_modules=["my_module"], # 单文件模块写法
     # packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # 多文件模块写法
     packages=find_packages("gostyle"),
 
     # 以下均为可选参数
-    # long_description=readme,# 长描述
-    # url='https://github.com/pypa/sampleproject', # 主页链接
+    long_description=readme,# 长描述
+    long_description_content_type='text/markdown',
+    url='https://github.com/luoyusang2007/gostyle', # 主页链接
     author='Luo Yusang', # 作者名
     author_email='luoyusang2007@hotmail.com', # 作者邮箱
     classifiers=[

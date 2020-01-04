@@ -1,4 +1,4 @@
-from gostyle.defer import defer_inside, defer
+from gostyle import defer_inside, defer
 @defer_inside
 def great_func():
     a = [1,2,3]
@@ -9,7 +9,7 @@ def great_func():
         lambda : print(a),
         lambda : print(b)
     )
-    a[1] = 5 # Change content of a after defer
+    a[1] = 5 # Change content of a after claiming defer
     return a,b
     
 

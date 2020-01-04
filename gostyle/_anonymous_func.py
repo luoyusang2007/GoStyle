@@ -1,9 +1,9 @@
 import inspect
-def set_var(name,val, layer = 2):
+def af_set_var(name,val, layer = 2):
     stack = inspect.stack()
     inspect.getargvalues(stack[layer].frame).locals[name]=val
     # print(inspect.getargvalues(stack[layer].frame))
-def get_var(name, layer = 2):
+def af_get_var(name, layer = 2):
     stack = inspect.stack()
     return inspect.getargvalues(stack[layer].frame).locals[name]
     

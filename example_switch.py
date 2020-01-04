@@ -1,14 +1,9 @@
-from gostyle.switch import switch,case, default, set_var as sw_set_var
-from gostyle.anonymous_func import func, set_var as af_set_var, get_var as af_get_var
+from gostyle import switch,case, default,  sw_set_var
+
 
 a=4
 outer_var="Switch"
 
-
-b = func(
-    lambda : af_set_var("ee", 3),
-    lambda : print(af_get_var("ee") + 4)
-)
 
 
 # Return and 
