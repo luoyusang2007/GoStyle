@@ -1,4 +1,4 @@
-# gostyle
+# GoStyle
 Go syntax implementation in python. 
 
 # Threading Wrapper Like goRoutine
@@ -23,7 +23,7 @@ t.start()
 ```
 
 ## How To Use in Python
-If the function is self-defined, you can use decorator `@gostyle.startable` like following:
+If the function is self-defined, you can use decorator `@gostyle.startable()` like following:
 ```python
 import gostyle
 @gostyle.startable()
@@ -100,8 +100,8 @@ test_thread.start("Start Loop")
 # Defer
 In Golang, defer is used to do things(usually cleaning-up) after a function returns.
 ## How To Use in Python
+Usage of decorator `defer_inside`:
 ```python
-
 from gostyle import defer_inside, defer
 @defer_inside
 def great_func():
@@ -112,14 +112,15 @@ def great_func():
         lambda : print(a),
         lambda : print(b)
     )
-    a[1] = 5 # Change content of a after claiming defer
+    a.append(9)
     return a,b
-    
 print(great_func())
 
 ```
 
 
+
+-----------------------------------------
 # Todos
 ## Threading
 Manage Threads started by gostyle
