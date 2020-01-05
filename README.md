@@ -13,9 +13,9 @@ In golang, the thread creating has following features:
 * The parameter passing is the same as the original function defined by user.
 * The original function is still usable as defined.
 
-However, in pyton creating a thread is stupid:
+However, in python creating a thread is stupid:
 ```python
-#Ptrhon
+#Python
 #...
 t = threading.Thread(target=XXX, args=(arg1,arg2))
 t.start()
