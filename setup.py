@@ -1,13 +1,14 @@
+# _*_ coding:utf-8 _*_
 from setuptools import setup, find_packages
 
 with open('README.md') as fp:
     readme = fp.read()
 
 setup(
-    # 以下为必需参数
-    name='gostyle',  # 模块名
-    version='0.1.4',  # 当前版本
-    description='Golang Syntax For Python',  # 简短描述
+    # Necessary
+    name='gostyle',  # Module Name
+    version='0.1.5',  # Current Version
+    description='Golang Syntax For Python',  
     # py_modules=["my_module"], # 单文件模块写法
     # packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # 多文件模块写法
     packages=find_packages("gostyle"),
