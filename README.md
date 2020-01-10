@@ -1,6 +1,9 @@
 # GoStyle
 Go syntax implementation in Python. 
-
+# Installation
+```
+pip install gostyle
+```
 # Threading Wrapper Like goRoutine
 In GoLang, we can create parallel tasks via keyword `go`:
 ```go
@@ -62,7 +65,7 @@ def test_thread(title:str):
         time.sleep(1)
         print(title)
 # Start the thread 
-    go.test_thread("Go")
+go.test_thread("Go")
 # Note that the expression "test_thread('Normal')" can still run the original function in main thread.
 ```
 
@@ -146,3 +149,4 @@ Queue Wrapper
 
 ## Anonymous Functions
 ...
+
