@@ -1,5 +1,29 @@
 import threading
 from functools import wraps
+from queue import Queue
+
+
+class Chan(Queue):
+    def __init__(self,**kargs):
+        super().__init__(**kargs)
+    def __call__(self,val=None):
+        if val:
+            self.put(val)
+        else:
+            return self.get()
+    def __neg__(self):
+        return self.get()
+    def __pos__(self):
+        return self.get()
+    def __le__(self,val):
+        self.put(val)
+    def __lshift__(self,val):
+        self.put(val)
+    def __rrshift__(self,val):
+        self.put(val)
+    def __iadd__(self,val):
+        self.put(val)
+        return self
 
 def _decorator_attach(daemon = True, forever = False, attached_obj=None, _name=""):
     def _decorator_body(f):

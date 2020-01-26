@@ -24,8 +24,26 @@ t = threading.Thread(target=XXX, args=(arg1,arg2))
 t.start()
 #...
 ```
+## Recommended Usage
+Usage with best compatibility:
+```Python
+import time
+from gostyle import go, Chan
+chan1 = Chan()
+def test_thread(title:str):
+    for cnt in range(10):
+        chan1<=cnt
+        time.sleep(1)
+        print(title)
+def chan_reader():
+    while True :
+        print(chan1())
+# Start the thread 
+go(test_thread)("Call")
+chan_reader()
+```
 
-## How To Use in Python
+## How To Use Word `go` in Python
 If the function is self-defined, you can use decorator `@gostyle.startable()` like following:
 ```Python
 import time
