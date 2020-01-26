@@ -7,7 +7,7 @@ with open('README.md') as fp:
 setup(
     # Necessary
     name='gostyle',  # Module Name
-    version='0.1.5',  # Current Version
+    version='0.1.7',  # Current Version
     description='Golang Syntax For Python',  
     # py_modules=["my_module"], # 单文件模块写法
     # packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # 多文件模块写法
